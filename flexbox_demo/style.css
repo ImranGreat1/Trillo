@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    background-color: #ccc;
+    padding: 10px;
+
+
+    display: flex;
+    /* Default flex-direction is set to row */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    background-color: crimson;
+    padding: 30px;
+    margin: 30px;
+    font-size: 1.4rem;
+
+    /*
+        Initial values for the following properties
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;    // Acquire only the space it need
+
+        // Shorthand
+        flex: 0 1 auto;
+    */
+    
+}
+
+
+.i2 {
+    height: 200px;
+    order: 1;
+    /* When it cannot more fit 300px, it will shrink. That's the default behaviour*/
+    flex-basis: 300px;
+}
+
+.i4 {
+    align-self: flex-start;
+    order: -1;
+}
+
+.i5 {
+    /*Take remaining available space.*/
+    flex: 1 1 auto;
+}
+
+
+
+/* Flex-direction: column */
+.col-container {
+    background-color: rgb(132, 202, 138);
+    padding: 10px;
+    height: 1300px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+
+.col-item {
+    background-color: plum;
+    padding: 30px;
+    margin: 30px;
+    font-size: 1.4rem;
+}
+
+
+/* Flex-direction: column */
+.alcon-container {
+    background-color: rgb(110, 182, 211);
+    padding: 10px;
+    height: 700px;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* flex-wrap and align-content work hand in hand */
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+
+.alcon-item {
+    background-color: rgb(228, 144, 200);
+    padding: 30px;
+    margin: 30px;
+    font-size: 1.4rem;
+}
